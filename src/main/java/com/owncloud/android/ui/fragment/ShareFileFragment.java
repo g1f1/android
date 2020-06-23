@@ -209,7 +209,7 @@ public class ShareFileFragment extends Fragment implements ShareUserListAdapter.
         }
 
         //  Add User Button
-        binding.addUserButton.getBackground().setColorFilter(accentColor, PorterDuff.Mode.SRC_ATOP);
+        ThemeUtils.colorPrimaryButton(binding.addUserButton, getContext());
         // Show Search Fragment
         binding.addUserButton.setOnClickListener(view -> mListener.showSearchUsersAndGroups());
 
@@ -789,8 +789,7 @@ public class ShareFileFragment extends Fragment implements ShareUserListAdapter.
 
     private void initLinkButton() {
         MaterialButton getLinkButton = binding.shareViaLinkGetLinkButton;
-        getLinkButton.getBackground().setColorFilter(ThemeUtils.primaryColor(getContext()),
-                                                     PorterDuff.Mode.SRC_ATOP);
+        ThemeUtils.colorPrimaryButton(getLinkButton, getContext());
         getLinkButton.setVisibility(View.VISIBLE);
 
         //GetLink from the server and show ShareLinkToDialog
